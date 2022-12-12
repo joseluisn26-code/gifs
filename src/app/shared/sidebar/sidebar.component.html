@@ -1,0 +1,16 @@
+<div class="bg-success border-right p-3" id="sidebar">
+    <h3 class="text-white">Gift-App</h3>
+
+    <hr class="text-white">
+
+    <div class="list-group list reset">
+        <!-- ngfor cada elemnto en servicehistorial -->
+        <a *ngFor="let _historial of historial" 
+        (click)="buscar(_historial)"    
+        href="#" 
+            class="list-group-item list-group-item-action text-white bg-warning">
+            {{_historial | titlecase}}
+        </a>
+    </div>
+
+</div>
