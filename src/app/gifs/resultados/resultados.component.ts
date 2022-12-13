@@ -8,6 +8,8 @@ import { GifsService } from '../services/gifs.service';
 })
 export class ResultadosComponent {
 
+  public page!: number;
+
   get resultados () {
     return this.GifsService.resultados;
   }

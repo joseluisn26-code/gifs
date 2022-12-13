@@ -24,6 +24,7 @@ export interface Gif {
     username:                   Username;
     source:                     string;
     title:                      string;
+    alt_text:                   string;
     rating:                     Rating;
     content_url:                string;
     source_tld:                 string;

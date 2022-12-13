@@ -5,7 +5,7 @@
 </ul> -->
 
 <div class="row row-cols-1 row-cols-md-2 g-4">
-    <div *ngFor="let gif of resultados" class="col-md-4 col-sm-6 animate__animated animate__fadeIn animate__slower">
+    <div class="col-md-4 col-sm-6 animate__animated animate__fadeIn animate__slower" *ngFor="let gif of resultados | paginate: { itemsPerPage: 6, currentPage: page }">
         <div class="card text-white bg-warning h-100 ">
 
             <img [src]="gif.images.downsized_medium.url" [alt]="gif.title" class="card-img-top">
@@ -20,3 +20,9 @@
         </div>
     </div>
 </div>
+
+<pagination-controls class="m-2 bg-success text-white text-center"
+    (pageChange)="page = $event" 
+  previousLabel="Prev"
+  nextLabel="Next"
+></pagination-controls>
